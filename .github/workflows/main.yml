@@ -30,12 +30,10 @@ jobs:
           perl Build.PL
           ls -al
           ./Build installdeps
-          cat Build
-          ls -al _build
       - name: Build
         run: |
           cd svn-bisect
-          pp -o svn-bisect ./bin/svn-bisect -vvv
+          pp -o svn-bisect ./bin/svn-bisect
           ls -al
       - uses: actions/upload-artifact@v4
         with:
